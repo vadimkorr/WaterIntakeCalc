@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterIntakeCalc", "WaterIntakeCalc\WaterIntakeCalc.csproj", "{3F10130E-4945-4432-B4D4-E9008CDD8B76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterIntakeCalc.Tests", "WaterIntakeCalc.Tests\WaterIntakeCalc.Tests.csproj", "{0993F4D0-FC4A-4675-8F04-B6A98FAAF349}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F10130E-4945-4432-B4D4-E9008CDD8B76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F10130E-4945-4432-B4D4-E9008CDD8B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F10130E-4945-4432-B4D4-E9008CDD8B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F10130E-4945-4432-B4D4-E9008CDD8B76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0993F4D0-FC4A-4675-8F04-B6A98FAAF349}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0993F4D0-FC4A-4675-8F04-B6A98FAAF349}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0993F4D0-FC4A-4675-8F04-B6A98FAAF349}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0993F4D0-FC4A-4675-8F04-B6A98FAAF349}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
