@@ -10,6 +10,7 @@ using Microsoft.Owin.Security.OAuth;
 using Owin;
 using WaterIntakeCalc.Providers;
 using WaterIntakeCalc.Models;
+using WaterIntakeCalc.DAL;
 
 namespace WaterIntakeCalc
 {
