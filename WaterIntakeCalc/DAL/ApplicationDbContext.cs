@@ -9,7 +9,6 @@ using WaterIntakeCalc.Models;
 
 namespace WaterIntakeCalc.DAL
 {
-
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext() : base("DefaultConnection", throwIfV1Schema: false)
