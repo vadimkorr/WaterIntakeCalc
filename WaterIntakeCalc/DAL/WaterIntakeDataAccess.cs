@@ -40,10 +40,5 @@ namespace WaterIntakeCalc.DAL
         {
             return _dbContext.WaterIntakes.Where(x => x.Date >= from && x.Date <= to && x.UserId == userId).Select(x => x).ToList();
         }
-
-        public List<WaterIntakeModel> GetItemsOfMonth(WaterIntakeModel model)
-        {
-            return _dbContext.WaterIntakes.Where(x => x.Date.Year == model.Date.Year && x.Date.Month == model.Date.Month && x.UserId == model.UserId).Select(x => x).ToList();
-        }
     }
 }

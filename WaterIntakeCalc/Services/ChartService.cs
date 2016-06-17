@@ -17,7 +17,7 @@ namespace WaterIntakeCalc.Services
         {
             // create the chart
             _chart = new Chart();
-            _chart.Size = new Size(600, 250);
+            _chart.Size = new Size(500, 250);
 
             _chartArea = new ChartArea();
             _chartArea.AxisX.MajorGrid.LineColor = Color.LightGray;

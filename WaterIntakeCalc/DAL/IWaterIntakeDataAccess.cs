@@ -13,6 +13,5 @@ namespace WaterIntakeCalc.DAL
         void Add(WaterIntakeModel model);
         void Update(WaterIntakeModel model);
         List<WaterIntakeModel> GetItemsOfWeek(string UserId, DateTime from, DateTime to);
-        List<WaterIntakeModel> GetItemsOfMonth(WaterIntakeModel model);
     }
 }

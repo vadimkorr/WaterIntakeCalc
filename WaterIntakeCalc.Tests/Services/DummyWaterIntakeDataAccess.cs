@@ -41,11 +41,6 @@ namespace WaterIntakeCalc.Tests.Services
             throw new NotImplementedException();
         }
 
-        public List<WaterIntakeModel> GetItemsOfMonth(WaterIntakeModel model)
-        {
-            return _waterIntakeModels.Where(x => x.Date.Year == model.Date.Year && x.Date.Month == model.Date.Month).Select(x => x).ToList();
-        }
-
         public List<WaterIntakeModel> GetItemsOfWeek(string UserId, DateTime from, DateTime to)
         {
             return _waterIntakeModels.Where(x => x.Date >= from && x.Date <= to).Select(x => x).ToList();
