@@ -67,5 +67,185 @@ body {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0; } }
+/*========== region: sign page ==========*/
+.sign-in-wrapper {
+  height: 280px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 0 #4E4E4E;
+  background-color: #e5f0ff; }
+
+.sign-in-form {
+  position: relative;
+  background-color: #e5f0ff;
+  padding: 20px 30px 40px; }
+
+@media (min-width: 600px) {
+  .sign-in-wrapper {
+    width: 40%; } }
+@media (max-width: 600px) {
+  .sign-in-wrapper {
+    width: 90%; } }
+@media (max-width: 768px) {
+  .nav-justified > li {
+    display: table-cell;
+    width: 1%; }
+
+  .nav-justified > li > a {
+    border-bottom: 1px solid #ddd !important;
+    border-radius: 4px 4px 0 0 !important;
+    margin-bottom: 0 !important; }
+
+  .nav-tabs.nav-justified > .active > a,
+  .nav-tabs.nav-justified > .active > a:hover,
+  .nav-tabs.nav-justified > .active > a:focus {
+    border-bottom-color: #fff !important; } }
+ul.nav-tabs li.active a {
+  background-color: #e5f0ff; }
+
+#signInTab form .btn,
+#signUpTab form .btn {
+  width: 100%; }
+
+ul.nav-tabs li,
+ul.nav-tabs li a,
+ul.nav-tabs li a:hover,
+ul.nav-tabs li a:focus {
+  background-color: #fff !important;
+  border: 0px !important; }
+
+ul.nav-tabs li.active,
+ul.nav-tabs li.active a,
+ul.nav-tabs li.active a:hover,
+ul.nav-tabs li.active a:focus {
+  background-color: #e5f0ff !important;
+  border: 0px !important; }
+
+li.signInTab {
+  border-top-left-radius: 5px; }
+
+li.signUpTab {
+  border-top-right-radius: 5px; }
+
+/*========== region end: sign page ==========*/
+/*========== region: water intake page ==========*/
+.status-header {
+  height: 70px; }
+
+.status-header > span {
+  line-height: 70px;
+  float: left;
+  vertical-align: middle; }
+
+.logout-btn-cont {
+  line-height: 70px;
+  float: right; }
+
+.logout-btn-cont > button {
+  width: 60px;
+  height: 40px;
+  padding: 0px; }
+
+.logout-btn-cont > button > span {
+  font-size: 15px; }
+
+.water-intake-cont {
+  height: 400px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+  border-radius: 5px; }
+
+@media (min-width: 600px) {
+  .water-intake-cont {
+    width: 70%; } }
+@media (max-width: 600px) {
+  .water-intake-cont {
+    width: 90%; } }
+.water-intake-inputs {
+  width: 100%;
+  padding: 15px;
+  text-align: center; }
+
+.water-intake-inputs > * {
+  display: inline-block; }
+
+.water-intake-inputs > input {
+  width: 40%;
+  margin-right: 5px; }
+
+.water-intake-inputs > button {
+  width: 20%; }
+
+.water-intake-chart-cont {
+  width: 100%;
+  padding: 15px;
+  text-align: center; }
+
+.water-intake-chart-cont > * {
+  display: inline-block; }
+
+div.chart-btn > button {
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding: 0px; }
+
+div.chart-btn > button > span {
+  text-align: center;
+  font-size: 25px;
+  vertical-align: middle; }
+
+.water-intake-chart-cont > div.chart-btn {
+  width: 50px;
+  margin-right: 5px;
+  margin-left: 5px;
+  text-align: center;
+  display: inline-block; }
+
+.water-intake-chart-cont > div.chart-cont {
+  text-align: center;
+  display: inline-block; }
+
+.water-intake-chart-cont > div.under-chart-btns-cont {
+  margin-top: 5px;
+  width: 100%; }
+
+.water-intake-chart-cont > div.under-chart-btns-cont > div.chart-btn {
+  text-align: center;
+  display: inline-block; }
+
+.water-intake-chart-cont > div.chart-cont > img {
+  text-align: center;
+  width: 100%; }
+
+@media (max-width: 900px) {
+  .water-intake-chart-cont > div.chart-btn {
+    display: none; }
+
+  .water-intake-chart-cont > div.chart-cont {
+    text-align: center;
+    width: 100%; } }
+@media (min-width: 900px) {
+  .water-intake-chart-cont > div.under-chart-btns-cont {
+    display: none; }
+
+  .water-intake-chart-cont > div.chart-cont {
+    width: 70%; } }
+.date-cont {
+  width: 100%;
+  padding: 15px;
+  text-align: center; }
+
+/*========== endregion: water intake page ==========*/
 
 /*# sourceMappingURL=main.css.map */
