@@ -1,4 +1,4 @@
-<div class="sign-in-wrapper" >  
+<div class="sign-in-wrapper" ng-controller="MainCtrl as mc>  
 	<ul class="nav nav-tabs nav-justified " id="myTab">
 		<li class="active signInTab"><a data-target="#signInTab" data-toggle="tab">Sign In</a></li>
 		<li class="signUpTab"><a data-target="#signUpTab" data-toggle="tab">Sign Up</a></li>
@@ -9,10 +9,10 @@
 				<form name="signInForm" ng-submit="signIn(inCredentials)" novalidate>
 					<div class="loader" ng-if="loading"></div>
 					<div class="form-group">
-						<input class="form-control" type="text" id="username" ng-model="inCredentials.username" placeholder="Login">
+						<input class="form-control" type="text" id="inUsername" ng-model="inCredentials.username" placeholder="Login">
 					</div>
 						<div class="form-group">
-						<input class="form-control" type="password" id="password" ng-model="inCredentials.password" placeholder="Password">
+						<input class="form-control" type="password" id="inPassword" ng-model="inCredentials.password" placeholder="Password">
 					</div>
 					<div class="checkbox">
 						<label>
@@ -26,10 +26,10 @@
 				<form name="signUpForm" ng-submit="signUp(upCredentials)" novalidate>
 					<div class="loader" ng-if="loading"></div>
 					<div class="form-group">
-						<input class="form-control" type="text" id="username" ng-model="upCredentials.username" placeholder="Login">
+						<input class="form-control" type="text" id="upUsername" ng-model="upCredentials.username" placeholder="Login">
 					</div>
 						<div class="form-group">
-						<input class="form-control" type="password" id="password" ng-model="upCredentials.password" placeholder="Password">
+						<input class="form-control" type="password" id="upPassword" ng-model="upCredentials.password" placeholder="Password">
 					</div>
 					<button class="btn" type="submit">Sign Up</button>
 				</form>

@@ -9,9 +9,23 @@
  */
 angular.module('waterIntakeCalcWebApp')
   .controller('WaterinakeCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+
+$scope.addIntake = function(amount){
+  
+}
+
+$scope.getNextWeek = function(){
+  
+}
+
+$scope.getPrevWeek = function(){
+  
+}
+
+$scope.getCurrWeek = function(){
+  
+}
+
+
+
   });
