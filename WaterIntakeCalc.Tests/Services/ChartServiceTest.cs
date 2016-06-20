@@ -1,4 +1,7 @@
-﻿using NUnit.Framework;
+﻿using System.Drawing.Imaging;
+using System.IO;
+using System.Net.Mime;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +10,7 @@ using System.Threading.Tasks;
 using WaterIntakeCalc.DAL;
 using WaterIntakeCalc.Models;
 using WaterIntakeCalc.Services;
+using System.Drawing;
 
 namespace WaterIntakeCalc.Tests.Services
 {
@@ -32,6 +36,11 @@ namespace WaterIntakeCalc.Tests.Services
                 Date = new DateTime(DateTime.Now.Year, 1, 10)
             };
             _waterIntakeService.GetChartOfWeek(model);
+
+            byte[] image = _waterIntakeService.GetChartOfWeek(model);
+            MemoryStream ms = new MemoryStream(image);
+            Image i = Image.FromStream(ms);
+            i.Save("D:/chart1.png", ImageFormat.Png);
         }
     }
 }

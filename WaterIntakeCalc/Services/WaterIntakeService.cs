@@ -34,7 +34,7 @@ namespace WaterIntakeCalc.Services
                 var item = _waterIntakeDataAccess.GetItemByUserIdAndDate(model.UserId, model.Date);
                 if (item == null)
                 {
-                    _waterIntakeDataAccess.Add(item);
+                    _waterIntakeDataAccess.Add(model);
                 }
                 else
                 {
@@ -60,6 +60,22 @@ namespace WaterIntakeCalc.Services
             List<WaterIntakeModel> models = _waterIntakeDataAccess.GetItemsOfWeek(model.UserId, from, to);
             List<DateTime> dates = models.Select(x => x.Date).ToList();
             List<int> amounts = models.Select(x => x.WaterAmount).ToList();
+
+            for (int i = dates.Count; i < 7; i++)
+            {
+                if (dates.Count == 0)
+                {
+                    DateTime d = new DateTime();
+                    d = DateTime.Now;
+                    dates.Add(d);
+                }
+                else
+                {
+                    dates.Add(dates.Last().AddDays(1));
+                }
+                amounts.Add(0);
+            }
+
             if (amounts.Count() == 0)
             {
                 return null;

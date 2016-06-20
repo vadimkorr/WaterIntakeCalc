@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using System.Drawing;
+using System.Drawing.Imaging;
+using System.Net.Http.Headers;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -51,11 +54,21 @@ namespace WaterIntakeCalc.Controllers
 
             if (res == null)
             {
-                return Request.CreateResponse(HttpStatusCode.OK, ResponseContent<string>.Failure("No data available for requested week"));
+                return Request.CreateResponse(HttpStatusCode.OK,
+                    ResponseContent<string>.Failure("No data available for requested week"));
             }
-            MemoryStream ms = new MemoryStream(res);
-            var strCont = new StreamContent(ms);
-            return Request.CreateResponse(HttpStatusCode.OK, ResponseContent<StreamContent>.SuccessResult(strCont));
+            HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
+            byte[] imgData = res;
+
+
+            MemoryStream ms = new MemoryStream(imgData);
+            response.Content = new StreamContent(ms);
+            response.Content.Headers.ContentType = new MediaTypeHeaderValue("image/png");
+
+           // Image i = Image.FromStream(ms);
+           // i.Save("D:/chart2.png", ImageFormat.Png);
+
+            return response;
         }
     }
 }

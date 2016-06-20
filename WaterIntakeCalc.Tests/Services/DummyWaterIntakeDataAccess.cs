@@ -43,7 +43,7 @@ namespace WaterIntakeCalc.Tests.Services
 
         public List<WaterIntakeModel> GetItemsOfWeek(string UserId, DateTime from, DateTime to)
         {
-            return _waterIntakeModels.Where(x => x.Date >= from && x.Date <= to).Select(x => x).ToList();
+            return new List<WaterIntakeModel>() {_waterIntakeModels[0]};// .Where(x => x.Date >= from && x.Date <= to).Select(x => x).ToList();
         }
 
         public void Update(WaterIntakeModel model)

@@ -19,7 +19,7 @@ namespace WaterIntakeCalc.DAL
 
         public WaterIntakeModel GetItemByUserIdAndDate(string id, DateTime date)
         {
-            WaterIntakeModel item = _dbContext.WaterIntakes.Select(x => x).Where(x => x.UserId == id && x.Date == date).FirstOrDefault();
+            WaterIntakeModel item = _dbContext.WaterIntakes.Select(x => x).SingleOrDefault(x => x.UserId == id && x.Date == date);
             return item;
         }
 
