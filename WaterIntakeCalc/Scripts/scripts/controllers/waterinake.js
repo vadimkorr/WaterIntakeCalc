@@ -18,7 +18,20 @@ angular.module('waterIntakeCalcWebApp')
     };
     $scope.chartPath = "/Scripts/images/chart.png";
     $scope.getCurrWeek = function () {
-        $scope.chartPath = "/api/waterintake/GetChartOfWeek";
+
+
+
+        $http.get('/api/waterintake/GetChartOfWeek/',
+        { responseType: 'arraybuffer' }
+      ).success( function ( res ) {
+        var blob = new Blob( [res], { type: 'image/png' } );
+        $scope.chartPath = (window.URL || window.webkitURL).createObjectURL(blob);
+      } );
+
+
+
+
+        //$scope.chartPath = "/api/waterintake/GetChartOfWeek/";
         //$http.get('api/waterintake/GetChartOfWeek').then(function(res) {   
         //        $scope.chartPath = res.data;
         //    return res.data;
