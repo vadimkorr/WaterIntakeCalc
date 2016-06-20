@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using WaterIntakeCalc.Const;
@@ -48,7 +49,7 @@ namespace WaterIntakeCalc.Services
             }
         }
 
-        public void GetChartOfWeek(WaterIntakeModel model)
+        public byte[] GetChartOfWeek(WaterIntakeModel model)
         {
             ChartService _chartService = new ChartService();
 
@@ -59,7 +60,11 @@ namespace WaterIntakeCalc.Services
             List<WaterIntakeModel> models = _waterIntakeDataAccess.GetItemsOfWeek(model.UserId, from, to);
             List<DateTime> dates = models.Select(x => x.Date).ToList();
             List<int> amounts = models.Select(x => x.WaterAmount).ToList();
-            _chartService.CreateChartOfWeek(dates, amounts);
+            if (amounts.Count() == 0)
+            {
+                return null;
+            }
+            return _chartService.CreateChartOfWeek(dates, amounts);
         }
 
     }

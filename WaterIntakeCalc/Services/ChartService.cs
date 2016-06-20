@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Drawing;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.IO;
 
 namespace WaterIntakeCalc.Services
 {
@@ -33,28 +34,25 @@ namespace WaterIntakeCalc.Services
             _chart.Series.Add(_series);
         }
 
-        public void CreateChartOfWeek(List<DateTime> dateX, List<int> amountY)
+        public byte[] CreateChartOfWeek(List<DateTime> dateX, List<int> amountY)
         {
             _chartArea.AxisX.LabelStyle.Format = "dd/MMM\nddd";   
             _chart.Series["Series1"].Points.DataBindXY(dateX, amountY);
-            GetImage();
+            return GetImage();
         }
 
-        public void CreateChartOfMonth(List<DateTime> dateX, List<int> amountY)
+        private byte[] GetImage()
         {
-            _chartArea.AxisX.LabelStyle.Format = "dd/MMM\nddd";
-            _chart.Series["Series1"].Points.DataBindXY(dateX, amountY);
-            GetImage();
-        }
-
-        private void GetImage()
-        {
-            _chart.ChartAreas.Add(_chartArea);
-           
+            _chart.ChartAreas.Add(_chartArea);       
             // draw
             _chart.Invalidate();
             // write out a file
-            _chart.SaveImage("D:/chart.png", ChartImageFormat.Png);
+
+            using (MemoryStream m = new MemoryStream())
+            {
+                _chart.SaveImage(m, ChartImageFormat.Png);
+                return m.ToArray();
+            }
         }
     }
 }

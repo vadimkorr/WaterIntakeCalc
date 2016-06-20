@@ -233,8 +233,6 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
     <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
@@ -254,17 +252,31 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\images\chart.png" />
+    <Content Include="Scripts\images\yeoman.png" />
+    <Content Include="Scripts\scripts\app.js" />
+    <Content Include="Scripts\scripts\controllers\about.js" />
+    <Content Include="Scripts\scripts\controllers\main.js" />
+    <Content Include="Scripts\scripts\controllers\waterinake.js" />
+    <Content Include="Scripts\scripts\ext\angular-animate.js" />
+    <Content Include="Scripts\scripts\ext\angular-aria.js" />
+    <Content Include="Scripts\scripts\ext\angular-cookies.js" />
+    <Content Include="Scripts\scripts\ext\angular-local-storage.js" />
+    <Content Include="Scripts\scripts\ext\angular-messages.js" />
+    <Content Include="Scripts\scripts\ext\angular-resource.js" />
+    <Content Include="Scripts\scripts\ext\angular-route.js" />
+    <Content Include="Scripts\scripts\ext\angular-sanitize.js" />
+    <Content Include="Scripts\scripts\ext\angular-touch.js" />
+    <Content Include="Scripts\scripts\ext\angular.js" />
+    <Content Include="Scripts\scripts\ext\bootstrap.js" />
+    <Content Include="Scripts\scripts\ext\jquery.js" />
+    <Content Include="Scripts\scripts\services\authservice.js" />
+    <Content Include="Scripts\styles\bootstrap.css" />
+    <Content Include="Scripts\styles\main.css" />
+    <Content Include="Scripts\views\about.html" />
+    <Content Include="Scripts\views\main.html" />
+    <Content Include="Scripts\views\waterintake.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -274,13 +286,11 @@
     </Content>
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\_references.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -291,6 +301,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+    <Content Include="Scripts\styles\.sass-cache\e83eaf7fb77e709c96d97420d97e6ae2bc5adb34\main.scssc" />
+    <Content Include="Scripts\styles\main.css.map" />
+    <Content Include="Scripts\styles\main.scss" />
+    <Content Include="Scripts\styles\sass watch.bat" />
+    <Content Include="Scripts\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Scripts\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Scripts\fonts\glyphicons-halflings-regular.woff2" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201606152130177_Init.resx">

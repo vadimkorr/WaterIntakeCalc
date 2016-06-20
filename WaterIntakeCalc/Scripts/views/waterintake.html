@@ -1,0 +1,37 @@
+<div class="water-intake-cont" ng-controller="WaterinakeCtrl">
+	<div class="water-intake-inputs">
+		<input type="number" class="form-control" placeholder="milliliters" ng-model="wateramount">
+		<button type="button" class="btn btn-default" ng-click="addIntake(wateramount)">Add</button>
+	</div>
+	<div class="water-intake-chart-cont">
+		<div class="chart-btn">
+			<button type="button" class="btn btn-default btn-lg" ng-click="getPrevWeek()">
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</button>
+		</div>
+		<div class="chart-cont">
+			<img src="/Scripts/images/chart.png" ng-src="chartPath" alt="chart">
+		</div>
+		<div class="chart-btn">
+			<button type="button" class="btn btn-default btn-lg" ng-click="getNextWeek()">
+				<span class="glyphicon glyphicon-menu-right"></span>
+			</button>
+		</div>
+		<div class="under-chart-btns-cont">
+			<div class="chart-btn">
+				<button type="button" class="btn btn-default btn-lg" ng-click="getPrevWeek()">
+					<span class="glyphicon glyphicon-menu-left"></span>
+				</button>
+			</div>
+			<div class="chart-btn">
+				<button type="button" class="btn btn-default btn-lg" ng-click="getNextWeek()">
+					<span class="glyphicon glyphicon-menu-right"></span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="date-cont">
+		<div><span class="chart-date">June 18, 2016</span></div>
+		<div><button type="button" class="btn btn-default" ng-click="getCurrWeek()">Current week</button></div>	
+	</div>
+</div>

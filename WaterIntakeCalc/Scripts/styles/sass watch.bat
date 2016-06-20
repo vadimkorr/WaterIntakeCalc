@@ -1,0 +1,1 @@
+sass --watch D:\GIT_ROOT\GITHUB_PUBLIC\WaterIntakeCalc\WaterIntakeCalcWeb\app\styles\main.scss:D:\GIT_ROOT\GITHUB_PUBLIC\WaterIntakeCalc\WaterIntakeCalcWeb\app\styles\main.css

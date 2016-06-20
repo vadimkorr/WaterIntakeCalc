@@ -24,7 +24,16 @@ namespace WaterIntakeCalc.DAL
             }
         }
 
-        public DbSet<WaterIntakeModel> WaterIntakes;
+        public DbSet<WaterIntakeModel> WaterIntakes { get; set; }
+        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        //{
+        //    //one-to-many 
+        //    modelBuilder.Entity<WaterIntakeModel>()
+        //                .HasRequired<ApplicationUser>(s => s.UserId) // WI entity requires AppUser 
+        //                .WithMany(s => s.WaterIntakes); // AppUser entity includes many WI entities
+
+        //}
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
